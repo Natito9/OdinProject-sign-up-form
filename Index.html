@@ -4,44 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Style.css" />
-    
-  
+
     <title>Document</title>
   </head>
   <body>
     <div class="columnLeft">
       <div class="logo">
-        <img class="logo-image" src="odin-lined.png" alt="logo" />
+        <img class="logo-image" src="images/odin-lined.png" alt="logo" />
         <p class="logo-text">odin</p>
       </div>
-      
     </div>
     <div class="columnRight">
       <div class="hero">
-        <p class="bold-p">This is NOT a real survey. I just want to write something here so
-          the screen does not feels empty.<br>Please fill out this survey so I can practice HTML.</p>
-        <p>Thank you for <italic>your</italic>  time.</p>
+        <p class="bold-p">
+          This is NOT a real survey. I just want to write something here so the
+          screen does not feels empty.<br />Please fill out this survey so I can
+          practice HTML.
+        </p>
+        <p>Thank you for <i>your</i> time.</p>
       </div>
       <div class="container">
         <p>Lets get started!</p>
-        <fieldset class="form">
+        <form class="form">
           <div class="form-row">
-            <label for="first-name">First Name: <input id="first-name" /></label>
-            <label for="last-name">Last Name: <input id="last-name" /></label>
+             <div class="label-group">
+               <label for="first-name" >First Name:</label>
+              <input type="text" required placeholder="John" />
+             <span class="error-message">Please fill this field</span>
+            </div>
+            <div class="label-group">
+             <label for="last-name" >Last Name: </label>
+              <input type="text" required placeholder="Doe"/>
+              <span class="error-message">Please fill this field</span>
+            </div>
           </div>
+
           <div class="form-row">
-            <label for="email">Email: <input id="email" /></label>
-            <label for="phone-number">Phone Number: <input id="phone-number" /></label>
+            <div class="label-group">
+              <label for="email">Email:</label>
+              <input required type="email" placeholder="example@gmail.com"/>
+              <span class="error-message">Please fill this field</span>
+            </div>
+
+            <div class="label-group">
+              <label for="phone-number">Phone Number:</label>
+              <input type="tel" required placeholder="1234567890" />
+              <span class="error-message">Please fill this field</span>
+            </div>
           </div>
+
           <div class="form-row">
-          <label for="password">Password: <input id="password" /></label>
-          <label for="confirm-password">Confirm Password: <input id="confirm-password"/></label>
+            <div class="label-group">
+              <label for="password" >Password:</label>
+              <input type="password" required minlength="8" />
+              <span class="error-message">Please fill this field</span>
+            </div>
+
+            <div class="label-group">
+              <label for="confirm-password" >Confirm Password:</label>
+              <input type="password" required minlength="8" />
+             <span class="error-message">Please fill this field</span>
+            </div>
           </div>
-        </fieldset>
+        </form>
       </div>
       <div class="footer">
-        <button><strong>Create Account</strong></button>
-        <p>Thank you for your time.</p>
+        <button id="submit-button">Create Account</button>
+        <p>Already have an account? <span id="login">Log in</span></p>
       </div>
     </div>
   </body>
